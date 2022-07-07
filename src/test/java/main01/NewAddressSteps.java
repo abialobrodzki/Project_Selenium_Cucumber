@@ -1,15 +1,33 @@
+package main01;
 
-//plik testowy
-import org.openqa.selenium.By;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import main01.page.MainPage;
 
-public class UserNewAddressSteps {
+import java.time.Duration;
 
-    public static void main(String[] args) {
-//        //plik ze sterownikiem - wskazanie lokalizacji pliku ze sterownikiem przeglądarki
-//        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+public class NewAddressSteps {
+
+   private WebDriver driver;
+
+    @Given("I'm on main page.")
+    public void openMainPage() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.get("https://mystore-testlab.coderslab.pl/index.php");
+    }
+
+    @When("I go to login page.")
+    public void openLoginPage() {
+        MainPage mainPage = new MainPage(driver);
+        mainPage.signIn();
+    }
+
+
 //
 //        //nowy obiekt klasy - uruchomienie przeglądarki - implementacja interfejsu WebDriver
 //        WebDriver driver = new ChromeDriver();
@@ -29,5 +47,4 @@ public class UserNewAddressSteps {
 //        element.submit();
 //        //zamknięcie przeglądarki
 //        driver.quit();
-    }
 }
