@@ -1,16 +1,18 @@
 package main01;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import main01.page.LoginPage;
+import main01.page.MainPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import main01.page.MainPage;
 
 import java.time.Duration;
 
 public class NewAddressSteps {
 
-   private WebDriver driver;
+    private WebDriver driver;
 
     @Given("I'm on main page.")
     public void openMainPage() {
@@ -27,6 +29,11 @@ public class NewAddressSteps {
         mainPage.signIn();
     }
 
+    @And("I login using {string} and {string}.")
+    public void userLogin(String login, String passwd) {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.loginIn(login, passwd);
+    }
 
 //
 //        //nowy obiekt klasy - uruchomienie przeglądarki - implementacja interfejsu WebDriver

@@ -5,11 +5,11 @@ Feature: Add new user address.
     #- będzie logować się na tego stworzonego użytkownika,
     Given I'm on main page.
     When I go to login page.
-#    And I login using "dodać login" and "dodać hasło".
-#
-#      #- wejdzie klikając w kafelek Addresses po zalogowaniu
-#      # (adres, na którym powinniśmy się znaleźć to:
-#        # https://mystore-testlab.coderslab.pl/index.php?controller=addresses
+    And I login using "private4@gmail.com" and "private4".
+
+      #- wejdzie klikając w kafelek Addresses po zalogowaniu
+       # (adres, na którym powinniśmy się znaleźć to:
+        # https://mystore-testlab.coderslab.pl/index.php?controller=addresses
 #    And I go to my addresses page.
 #
 #    #- kliknie w + Create new address,
