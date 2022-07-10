@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import main01.page.LoginPage;
 import main01.page.MainPage;
+import main01.page.MyAccountPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -33,6 +34,12 @@ public class NewAddressSteps {
     public void userLogin(String login, String passwd) {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginIn(login, passwd);
+    }
+
+    @And("I go to my {string} page url: {string}.")
+    public void openAddressesPage(String ExpectedPage, String ExpectedUrl) {
+        MyAccountPage myAccountPage = new MyAccountPage(driver);
+        myAccountPage.signIn(ExpectedPage,ExpectedUrl);
     }
 
 //

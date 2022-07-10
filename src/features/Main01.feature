@@ -2,15 +2,12 @@
 Feature: Add new user address.
 
   Scenario Outline: User adds new address to the account.
-    #- będzie logować się na tego stworzonego użytkownika,
+    # logowanie na stworzonego użytkownika
     Given I'm on main page.
     When I go to login page.
     And I login using "private4@gmail.com" and "private4".
-
-      #- wejdzie klikając w kafelek Addresses po zalogowaniu
-       # (adres, na którym powinniśmy się znaleźć to:
-        # https://mystore-testlab.coderslab.pl/index.php?controller=addresses
-#    And I go to my addresses page.
+    # wejście w kafelek Addresses po zalogowaniu
+    And I go to my "Addresses" page url: "https://mystore-testlab.coderslab.pl/index.php?controller=addresses".
 #
 #    #- kliknie w + Create new address,
 #    Then I can create new address.
