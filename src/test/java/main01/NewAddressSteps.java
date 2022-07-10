@@ -4,17 +4,13 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import main01.page.LoginPage;
-import main01.page.MainPage;
-import main01.page.MyAccountPage;
-import main01.page.MyAddresses;
+import main01.page.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
 public class NewAddressSteps {
-
     private WebDriver driver;
 
     @Given("I'm on main page.")
@@ -54,6 +50,13 @@ public class NewAddressSteps {
     public void createNewAddress() {
         MyAddresses myAddresses = new MyAddresses(driver);
         myAddresses.clickBtn();
+    }
+
+    @And("^I enter new address data: (.+), (.+), (.+), (.+), (.+), (.+).$")
+    public void enterNewAddressData(String alias, String address, String city, String postcode, String country, String phone) {
+        MyNewAddress myNewAddress = new MyNewAddress(driver);
+        myNewAddress.NewAddressData(alias, address, city, postcode, country, phone);
+        myNewAddress.clickBtn();
     }
 //
 //        //nowy obiekt klasy - uruchomienie przeglądarki - implementacja interfejsu WebDriver

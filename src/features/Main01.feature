@@ -11,10 +11,8 @@ Feature: Add new user address.
     # kliknięcie w "Create new address"
     Then I can see button "Create new address".
     When I go to create new address.
-#
-#      #- wypełni formularz New address -
-#      # dane z tabeli Examples (alias, address, city, zip/postal code, country, phone),
-#    And I enter new data address data: <alias>, <address>, <city>, <zip/postal code>, <country>, <phone>.
+    # wypełnienie formularza New address danymi z tabeli Examples
+    And I enter new address data: <alias>, <address>, <city>, <zip/postal code>, <country>, <phone>.
 #
 #    #- sprawdzi, czy dane w dodanym adresie są poprawne.
 #    Then I can see my new address.
