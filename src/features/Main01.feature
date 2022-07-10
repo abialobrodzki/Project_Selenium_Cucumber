@@ -15,14 +15,11 @@ Feature: Add new user address.
     And I enter new address data: <alias>, <address>, <city>, <zip/postal code>, <country>, <phone>.
     # sprawdzenie, czy dane w dodanym adresie są poprawne
     Then I can see my new address: <alias>, <address>, <city>, <zip/postal code>, <country>, <phone>.
-#
-#      #- usunie powyższy adres klikając w "delete",
-#    When I delete new address.
-#
-#      #- sprawdzi, czy adres został usunięty.
-#    Then I can't see deleted address.
-#
-#    And I close browser.
+    # usuwanie powyższego adresu klikając w "delete"
+    When I delete new address.
+    # sprawdzenie czy adres został usunięty
+    Then I can't see deleted address.
+    And I close browser.
     Examples:
       | alias | address | city     | zip/postal code | country        | phone     |
       | Boss  | Street  | Big city | 99-007          | United Kingdom | 123456789 |

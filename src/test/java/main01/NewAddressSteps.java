@@ -61,8 +61,25 @@ public class NewAddressSteps {
 
     @Then("^I can see my new address: (.+), (.+), (.+), (.+), (.+), (.+).$")
     public void checkNewAddress(String alias, String address, String city, String postcode, String country, String phone) {
-        MyNewAddress checkNewAddress = new MyNewAddress(driver);
-        checkNewAddress.checkAddress(alias, address, city, postcode, country, phone);
+        MyNewAddress myNewAddress = new MyNewAddress(driver);
+        myNewAddress.checkAddress(alias, address, city, postcode, country, phone);
     }
 
+    @When("I delete new address.")
+    public void deleteNewAddress() {
+        MyAddresses myAddresses = new MyAddresses(driver);
+        myAddresses.clickDelete();
+    }
+
+    @Then("I can't see deleted address.")
+    public void checkDeleteAddress() {
+        MyAddresses myAddresses = new MyAddresses(driver);
+        myAddresses.checkDelete();
+    }
+
+    @And("I close browser.")
+    public void browserExit() {
+        MyAddresses myAddresses = new MyAddresses(driver);
+        myAddresses.browserExit();
+    }
 }

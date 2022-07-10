@@ -14,7 +14,7 @@ public class MyAccountPage {
     public void signIn(String ExpectedPage, String ExpectedUrl) {
         driver.findElement(By.xpath("//*[contains(@id,'addresses')]")).click();
         String ActualTitle = driver.getTitle();
-        Assert.assertEquals(ActualTitle, ExpectedPage);
+        Assert.assertEquals(ExpectedPage, ActualTitle);
         String ActualUrl = driver.getCurrentUrl();
         Assert.assertEquals(ExpectedUrl, ActualUrl);
         System.out.println("Weryfikacja przejścia do zakładki Addresses: poprawna");

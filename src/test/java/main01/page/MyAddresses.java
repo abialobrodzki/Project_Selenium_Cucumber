@@ -21,4 +21,18 @@ public class MyAddresses {
     public void clickBtn() {
         driver.findElement(By.xpath("//*[contains(@data-link-action,'add-address')]")).click();
     }
+
+    public void clickDelete() {
+        driver.findElement(By.xpath("/*//div[5]//a[2]/span")).click();
+    }
+
+    public void checkDelete() {
+        WebElement message = driver.findElement(By.xpath("//*[contains(@data-alert,'success')]"));
+        Assert.assertTrue(message.isDisplayed());
+        System.out.println("Weryfikacja usunięcia adresu: poprawna");
+    }
+
+    public void browserExit() {
+        driver.quit();
+    }
 }
