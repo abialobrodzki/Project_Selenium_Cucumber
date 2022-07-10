@@ -58,23 +58,11 @@ public class NewAddressSteps {
         myNewAddress.NewAddressData(alias, address, city, postcode, country, phone);
         myNewAddress.clickBtn();
     }
-//
-//        //nowy obiekt klasy - uruchomienie przeglądarki - implementacja interfejsu WebDriver
-//        WebDriver driver = new ChromeDriver();
-//        //maksymalizacja okna przeglądarki
-//        driver.manage().window().maximize();
-//        //wejście na stronę Google.com
-//        driver.get("http://www.google.com");
-//        //dodanie kodu na minimalizację zgód RODO - znalezienie elementu na stronie
-//        driver.findElement(By.id("L2AGLb")).click();
-//        //szukanie elementu - pola do wpisania w wyszukiwarce
-//        WebElement element = driver.findElement(By.name("q"));
-//        //czyszczenie pola formularza
-//        element.clear();
-//        //wpisanie zawartości w pole formularze
-//        element.sendKeys("Coderslab");
-//        //wysłanie formularza
-//        element.submit();
-//        //zamknięcie przeglądarki
-//        driver.quit();
+
+    @Then("^I can see my new address: (.+), (.+), (.+), (.+), (.+), (.+).$")
+    public void checkNewAddress(String alias, String address, String city, String postcode, String country, String phone) {
+        MyNewAddress checkNewAddress = new MyNewAddress(driver);
+        checkNewAddress.checkAddress(alias, address, city, postcode, country, phone);
+    }
+
 }

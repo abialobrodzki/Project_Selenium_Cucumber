@@ -16,7 +16,7 @@ public class MyAccountPage {
         String ActualTitle = driver.getTitle();
         Assert.assertEquals(ActualTitle, ExpectedPage);
         String ActualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(ActualUrl, ExpectedUrl);
+        Assert.assertEquals(ExpectedUrl, ActualUrl);
         System.out.println("Weryfikacja przejścia do zakładki Addresses: poprawna");
     }
 }
