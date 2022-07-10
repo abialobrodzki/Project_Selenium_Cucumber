@@ -8,10 +8,9 @@ Feature: Add new user address.
     And I login using "private4@gmail.com" and "private4".
     # wejście w kafelek Addresses po zalogowaniu
     And I go to my "Addresses" page url: "https://mystore-testlab.coderslab.pl/index.php?controller=addresses".
-#
-#    #- kliknie w + Create new address,
-#    Then I can create new address.
-#    When I create new address.
+    # kliknięcie w "Create new address"
+    Then I can see button "Create new address".
+    When I go to create new address.
 #
 #      #- wypełni formularz New address -
 #      # dane z tabeli Examples (alias, address, city, zip/postal code, country, phone),

@@ -2,10 +2,12 @@ package main01;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import main01.page.LoginPage;
 import main01.page.MainPage;
 import main01.page.MyAccountPage;
+import main01.page.MyAddresses;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -39,9 +41,20 @@ public class NewAddressSteps {
     @And("I go to my {string} page url: {string}.")
     public void openAddressesPage(String ExpectedPage, String ExpectedUrl) {
         MyAccountPage myAccountPage = new MyAccountPage(driver);
-        myAccountPage.signIn(ExpectedPage,ExpectedUrl);
+        myAccountPage.signIn(ExpectedPage, ExpectedUrl);
     }
 
+    @Then("I can see button \"Create new address\".")
+    public void seeBtn() {
+        MyAddresses myAddresses = new MyAddresses(driver);
+        myAddresses.seeBtn();
+    }
+
+    @When("I go to create new address.")
+    public void createNewAddress() {
+        MyAddresses myAddresses = new MyAddresses(driver);
+        myAddresses.clickBtn();
+    }
 //
 //        //nowy obiekt klasy - uruchomienie przeglądarki - implementacja interfejsu WebDriver
 //        WebDriver driver = new ChromeDriver();
