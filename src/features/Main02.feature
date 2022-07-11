@@ -7,9 +7,13 @@ Feature: Add new order.
     Given I'm on main page - order.
     When I go to login page - order.
     And I login using "private4@gmail.com" and "private4" - order.
-
-  # wybierze do zakupu Hummingbird Printed Sweater
-    # (opcja dodatkowa: sprawdzi czy rabat na niego wynosi 20%),
+    Then I can see my "My account" page: "https://mystore-testlab.coderslab.pl/index.php?controller=my-account".
+    # przejście do sklepu
+#    When I go to shop
+    # wybranie do zakupu Hummingbird Printed Sweater
+#    And I select Hummingbird Printed Sweater
+    # opcja dodatkowa: sprawdzenie czy rabat wynosi 20%
+#    And I see discount 20%
   # wybierze rozmiar M
     # (opcja dodatkowa: zrób tak żeby można było sparametryzować rozmiar i wybrać S,M,L,XL),
   # wybierze 5 sztuk według parametru podanego w teście
