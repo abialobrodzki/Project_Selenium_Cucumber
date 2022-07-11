@@ -5,7 +5,7 @@ Feature: Add new order.
   Scenario: User adds a new order to the account.
     # logowanie na stworzonego użytkownika
     Given I'm on main page - order.
-#    When I go to login page.
+    When I go to login page - order.
 #    And I login using "private4@gmail.com" and "private4".
 
   # wybierze do zakupu Hummingbird Printed Sweater
