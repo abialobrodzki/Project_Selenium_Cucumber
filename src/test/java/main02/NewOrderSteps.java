@@ -1,7 +1,9 @@
 package main02;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import main02.page.LoginPage;
 import main02.page.MainPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,6 +26,12 @@ public class NewOrderSteps {
     public void signIn() {
         MainPage mainPage = new MainPage(driver);
         mainPage.signIn();
+    }
+
+    @And("I login using {string} and {string} - order.")
+    public void userLogin(String login, String passwd) {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.loginIn(login, passwd);
     }
 
 }

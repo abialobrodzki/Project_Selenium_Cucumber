@@ -6,7 +6,7 @@ Feature: Add new order.
     # logowanie na stworzonego użytkownika
     Given I'm on main page - order.
     When I go to login page - order.
-#    And I login using "private4@gmail.com" and "private4".
+    And I login using "private4@gmail.com" and "private4" - order.
 
   # wybierze do zakupu Hummingbird Printed Sweater
     # (opcja dodatkowa: sprawdzi czy rabat na niego wynosi 20%),
