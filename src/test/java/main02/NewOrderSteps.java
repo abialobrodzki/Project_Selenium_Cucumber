@@ -54,4 +54,10 @@ public class NewOrderSteps {
         ClothesPage clothesPage = new ClothesPage(driver);
         clothesPage.selectSweater();
     }
+
+    @And("I see discount 20%.")
+    public void checkDiscount() {
+        ClothesPage clothesPage = new ClothesPage(driver);
+        clothesPage.checkDiscount();
+    }
 }
