@@ -60,4 +60,10 @@ public class NewOrderSteps {
         ClothesPage clothesPage = new ClothesPage(driver);
         clothesPage.checkDiscount();
     }
+
+    @And("I select {string} size.")
+    public void selectSize(String size) {
+        ClothesPage clothesPage = new ClothesPage(driver);
+        clothesPage.selectSize(size);
+    }
 }

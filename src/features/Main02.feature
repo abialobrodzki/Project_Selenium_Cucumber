@@ -14,8 +14,11 @@ Feature: Add new order.
     And I select Hummingbird Printed Sweater.
     # opcja dodatkowa: sprawdzenie czy rabat wynosi 20%
     And I see discount 20%.
-  # wybierze rozmiar M
-    # (opcja dodatkowa: zrób tak żeby można było sparametryzować rozmiar i wybrać S,M,L,XL),
+    # wybranie rozmiar M
+      # opcja dodatkowa: sparametryzowanie rozmiaru i wybranie: S,M,L,XL
+    And I select "M" size.
+
+
   # wybierze 5 sztuk według parametru podanego w teście
     # (opcja dodatkowa: zrób tak żeby można było sparametryzować liczbę sztuk),
   # dodaj produkt do koszyka,

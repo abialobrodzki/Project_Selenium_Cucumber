@@ -22,10 +22,8 @@ public class ClothesPage {
 
     @FindBy(xpath = "//*[contains(@class,'discount-percentage')]")
     private WebElement discount;
-
     @FindBy(xpath = "//*[contains(@class,'regular-price')]")
     private WebElement priceBefore;
-
     @FindBy(xpath = "//*[@id=\"main\"]//div[2]/div/span[1]")
     private WebElement priceAfter;
 
@@ -43,6 +41,27 @@ public class ClothesPage {
             System.out.println("Weryfikacja wysokości obniżki o " + discount + "%: poprawna");
         } else {
             System.out.println("Weryfikacja wysokości obniżki o " + discount + "%: niepoprawna");
+        }
+    }
+
+    @FindBy(xpath = "//*[@id=\"group_1\"]/option[1]")
+    private WebElement sizeS;
+    @FindBy(xpath = "//*[@id=\"group_1\"]/option[2]")
+    private WebElement sizeM;
+    @FindBy(xpath = "//*[@id=\"group_1\"]/option[3]")
+    private WebElement sizeL;
+    @FindBy(xpath = "//*[@id=\"group_1\"]/option[4]")
+    private WebElement sizeXL;
+
+    public void selectSize(String size) {
+        if (size.equals("S")) {
+            sizeS.click();
+        } else if (size.equals("M")) {
+            sizeM.click();
+        } else if (size.equals("L")) {
+            sizeL.click();
+        } else if (size.equals("XL")) {
+            sizeXL.click();
         }
     }
 }
