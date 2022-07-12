@@ -42,4 +42,9 @@ public class NewOrderSteps {
         accountPage.signIn(ExpectedPage, ExpectedUrl);
     }
 
+    @When("I go to shop")
+    public void openClothesPage() {
+        MyAccountPage accountPage = new MyAccountPage(driver);
+        accountPage.openClothesPage();
+    }
 }

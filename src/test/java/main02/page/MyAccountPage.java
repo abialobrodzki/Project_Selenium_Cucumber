@@ -1,6 +1,7 @@
 package main02.page;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class MyAccountPage {
@@ -16,5 +17,9 @@ public class MyAccountPage {
         String ActualUrl = driver.getCurrentUrl();
         Assert.assertEquals(ExpectedUrl, ActualUrl);
         System.out.println("Weryfikacja logowania i przejścia do zakładki \"My account\": poprawna");
+    }
+
+    public void openClothesPage() {
+        driver.findElement(By.xpath("//*[contains(@href,'category')]")).click();
     }
 }
