@@ -9,9 +9,9 @@ Feature: Add new order.
     And I login using "private4@gmail.com" and "private4" - order.
     Then I can see my "My account" page: "https://mystore-testlab.coderslab.pl/index.php?controller=my-account".
     # przejście do sklepu
-    When I go to shop
+    When I go to shop.
     # wybranie do zakupu Hummingbird Printed Sweater
-#    And I select Hummingbird Printed Sweater
+    And I select Hummingbird Printed Sweater.
     # opcja dodatkowa: sprawdzenie czy rabat wynosi 20%
 #    And I see discount 20%
   # wybierze rozmiar M

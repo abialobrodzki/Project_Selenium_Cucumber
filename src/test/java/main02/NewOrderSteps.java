@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import main02.page.ClothesPage;
 import main02.page.LoginPage;
 import main02.page.MainPage;
 import main02.page.MyAccountPage;
@@ -42,9 +43,15 @@ public class NewOrderSteps {
         accountPage.signIn(ExpectedPage, ExpectedUrl);
     }
 
-    @When("I go to shop")
+    @When("I go to shop.")
     public void openClothesPage() {
         MyAccountPage accountPage = new MyAccountPage(driver);
         accountPage.openClothesPage();
+    }
+
+    @And("I select Hummingbird Printed Sweater.")
+    public void selectSweater() {
+        ClothesPage clothesPage = new ClothesPage(driver);
+        clothesPage.selectSweater();
     }
 }
