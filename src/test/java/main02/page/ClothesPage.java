@@ -98,4 +98,13 @@ public class ClothesPage {
         Assert.assertTrue(successCart.isEnabled());
         System.out.println("Weryfikacja dodania do koszyka: poprawna");
     }
+
+    @FindBy(xpath = "//*[@id=\"blockcart-modal\"]//a")
+    private WebElement checkoutBtn;
+
+    public void proceedToCheckout() {
+        checkoutBtn.click();
+    }
+
+
 }

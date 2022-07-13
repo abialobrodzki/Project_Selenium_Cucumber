@@ -22,9 +22,8 @@ Feature: Add new order.
     And I select "5" pieces.
     # dodanie produkt do koszyka
     Then I add item to cart.
-
-    # przejdzie do opcji - checkout,
-#    When I proceed to checkout
+    # przejście do opcji - checkout,
+    When I proceed to checkout.
   # potwierdzi address (możesz go dodać wcześniej ręcznie),
   #When I confirm address.
   # wybierze metodę odbioru - PrestaShop "pick up in store",

@@ -78,4 +78,10 @@ public class NewOrderSteps {
         ClothesPage clothesPage = new ClothesPage(driver);
         clothesPage.addToCart();
     }
+
+    @When("I proceed to checkout.")
+    public void proceedToCheckout() {
+        ClothesPage clothesPage = new ClothesPage(driver);
+        clothesPage.proceedToCheckout();
+    }
 }
