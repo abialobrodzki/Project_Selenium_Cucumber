@@ -1,0 +1,22 @@
+package main02.page;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class CartPage {
+    private WebDriver driver;
+
+    public CartPage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    @FindBy(xpath = "//*[contains(@href,'controller=order')]")
+    private WebElement checkoutBtn;
+
+    public void proceedToCheckout() {
+        checkoutBtn.click();
+    }
+}

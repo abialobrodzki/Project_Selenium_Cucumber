@@ -105,6 +105,4 @@ public class ClothesPage {
     public void proceedToCheckout() {
         checkoutBtn.click();
     }
-
-
 }

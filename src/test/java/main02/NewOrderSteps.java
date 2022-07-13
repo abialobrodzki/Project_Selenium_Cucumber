@@ -4,10 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import main02.page.ClothesPage;
-import main02.page.LoginPage;
-import main02.page.MainPage;
-import main02.page.MyAccountPage;
+import main02.page.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -83,5 +80,7 @@ public class NewOrderSteps {
     public void proceedToCheckout() {
         ClothesPage clothesPage = new ClothesPage(driver);
         clothesPage.proceedToCheckout();
+        CartPage cartPage = new CartPage(driver);
+        cartPage.proceedToCheckout();
     }
 }
