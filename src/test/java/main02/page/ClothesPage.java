@@ -64,4 +64,26 @@ public class ClothesPage {
             sizeXL.click();
         }
     }
+
+    @FindBy(xpath = "//*[contains(@class,'touchspin-up')]")
+    private WebElement upArrowBtn;
+    @FindBy(xpath = "//*[@id=\"quantity_wanted\"]")
+    private WebElement setQuantity;
+
+    public void selectQuantity(String qty) throws InterruptedException {
+        int quantity = Integer.parseInt(qty);
+        for (int i = 0; i <= quantity; i++) {
+            upArrowBtn.click();
+            Thread.sleep(1);
+        }
+        Thread.sleep(10);
+        String getQuantity = setQuantity.getAttribute("value");
+        int checkQuantity = Integer.parseInt(getQuantity);
+        if (quantity == 1) {
+            setQuantity.clear();
+            upArrowBtn.click();
+        } else if (checkQuantity != quantity) {
+            upArrowBtn.click();
+        }
+    }
 }

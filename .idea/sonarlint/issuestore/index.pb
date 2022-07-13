@@ -15,3 +15,15 @@ Y
 )src/test/java/main01/NewAddressSteps.java,6\9\69797a51e228dfcf4d61bf2f6683cc0e21a61581
 K
 src/features/Main01.feature,1\5\15ef6a6816251659c70b289c81448cc1c272267a
+[
++src/test/java/main01/page/MyNewAddress.java,f\b\fba9dc0a076fa9c00ccd2197c9fedff0d803f988
+X
+(src/test/java/main01/page/LoginPage.java,d\5\d5039332f41298fb3ce9f022e153d846e9d82294
+W
+'src/test/java/main01/page/MainPage.java,2\6\263a5d4d98cb43f2cbb5f23ba0c6ed01ebdc7d71
+W
+'src/test/java/main02/page/MainPage.java,1\d\1d1b3e48d3f1f7fd9c1d528dab1bacc2a2b87971
+X
+(src/test/java/main02/page/LoginPage.java,2\7\277fae9d231279d48caef3be49cc59afa336667d
+\
+,src/test/java/main02/page/MyAccountPage.java,e\a\eaa95baf54a98e472c2bf8847384c8086fb71d25

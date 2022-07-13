@@ -66,4 +66,10 @@ public class NewOrderSteps {
         ClothesPage clothesPage = new ClothesPage(driver);
         clothesPage.selectSize(size);
     }
+
+    @And("I select {string} pieces.")
+    public void selectQuantity(String qty) throws InterruptedException {
+        ClothesPage clothesPage = new ClothesPage(driver);
+        clothesPage.selectQuantity(qty);
+    }
 }

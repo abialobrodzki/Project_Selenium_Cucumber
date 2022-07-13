@@ -17,10 +17,10 @@ Feature: Add new order.
     # wybranie rozmiar M
       # opcja dodatkowa: sparametryzowanie rozmiaru i wybranie: S,M,L,XL
     And I select "M" size.
+    # wybranie 5 sztuk według parametru podanego w teście
+      # opcja dodatkowa: sparametryzowanie liczby sztuk
+    And I select "5" pieces.
 
-
-  # wybierze 5 sztuk według parametru podanego w teście
-    # (opcja dodatkowa: zrób tak żeby można było sparametryzować liczbę sztuk),
   # dodaj produkt do koszyka,
   # przejdzie do opcji - checkout,
   # potwierdzi address (możesz go dodać wcześniej ręcznie),
