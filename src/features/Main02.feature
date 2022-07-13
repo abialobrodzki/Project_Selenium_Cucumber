@@ -24,10 +24,10 @@ Feature: Add new order.
     Then I add item to cart.
     # przejście do opcji - checkout,
     When I proceed to checkout.
-  # potwierdzi address (możesz go dodać wcześniej ręcznie),
-  #When I confirm address.
-  # wybierze metodę odbioru - PrestaShop "pick up in store",
-  #And I select delivery.
+    # potwierdzenie adresu, może zostać dodany wcześniej ręcznie
+    When I confirm address.
+    # wybieranie metody odbioru - PrestaShop "pick up in store"
+#    And I select delivery.
   # wybierze opcję płatności - Pay by Check,
   #And I select payment.
   # kliknie na "order with an obligation to pay",

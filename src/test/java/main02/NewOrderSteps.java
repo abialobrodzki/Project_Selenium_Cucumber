@@ -83,4 +83,10 @@ public class NewOrderSteps {
         CartPage cartPage = new CartPage(driver);
         cartPage.proceedToCheckout();
     }
+
+    @When("I confirm address.")
+    public void confirmAddress() {
+        OrderPage orderPage = new OrderPage(driver);
+        orderPage.confirmAddress();
+    }
 }
