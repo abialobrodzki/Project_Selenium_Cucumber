@@ -1,5 +1,6 @@
 package main02.page;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -74,7 +75,7 @@ public class ClothesPage {
         int quantity = Integer.parseInt(qty);
         for (int i = 0; i <= quantity; i++) {
             upArrowBtn.click();
-            Thread.sleep(1);
+            Thread.sleep(10);
         }
         Thread.sleep(10);
         String getQuantity = setQuantity.getAttribute("value");
@@ -85,5 +86,16 @@ public class ClothesPage {
         } else if (checkQuantity != quantity) {
             upArrowBtn.click();
         }
+    }
+
+    @FindBy(xpath = "//*[contains(@data-button-action,'add-to-cart')]")
+    private WebElement addToCartBTn;
+    @FindBy(xpath = "//*[@id=\"blockcart-modal\"]/div/div")
+    private WebElement successCart;
+
+    public void addToCart() {
+        addToCartBTn.click();
+        Assert.assertTrue(successCart.isEnabled());
+        System.out.println("Weryfikacja dodania do koszyka: poprawna");
     }
 }

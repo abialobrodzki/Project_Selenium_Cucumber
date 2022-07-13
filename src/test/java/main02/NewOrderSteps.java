@@ -72,4 +72,10 @@ public class NewOrderSteps {
         ClothesPage clothesPage = new ClothesPage(driver);
         clothesPage.selectQuantity(qty);
     }
+
+    @Then("I add item to cart.")
+    public void addToCart() {
+        ClothesPage clothesPage = new ClothesPage(driver);
+        clothesPage.addToCart();
+    }
 }

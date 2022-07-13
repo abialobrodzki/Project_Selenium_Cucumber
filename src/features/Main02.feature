@@ -20,14 +20,21 @@ Feature: Add new order.
     # wybranie 5 sztuk według parametru podanego w teście
       # opcja dodatkowa: sparametryzowanie liczby sztuk
     And I select "5" pieces.
+    # dodanie produkt do koszyka
+    Then I add item to cart.
 
-  # dodaj produkt do koszyka,
-  # przejdzie do opcji - checkout,
+    # przejdzie do opcji - checkout,
+#    When I proceed to checkout
   # potwierdzi address (możesz go dodać wcześniej ręcznie),
+  #When I confirm address.
   # wybierze metodę odbioru - PrestaShop "pick up in store",
+  #And I select delivery.
   # wybierze opcję płatności - Pay by Check,
+  #And I select payment.
   # kliknie na "order with an obligation to pay",
+  #And I click "order with an obligation to pay".
   # zrobi screenshot z potwierdzeniem zamówienia i kwotą.
+  #Then I make screenshot with confirm order and payment
 
  # Wejdź w historię zamówień i detale (najpierw kliknij w użytkownika zalogowanego, później kafelek),
  # sprawdź, czy zamówienie znajduje się na liście ze statusem "Awaiting check payment" i kwotą taką samą jak na zamówieniu dwa kroki wcześniej.
