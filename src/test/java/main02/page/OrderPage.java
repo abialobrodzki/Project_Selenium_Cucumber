@@ -1,5 +1,6 @@
 package main02.page;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,5 +19,16 @@ public class OrderPage {
 
     public void confirmAddress() {
         confirmAddressBtn.click();
+    }
+
+    @FindBy(xpath = "//*[contains(@value,'1,')]")
+    private WebElement setDelivery;
+    @FindBy(xpath = "//*[contains(@name,'confirmDeliveryOption')]")
+    private WebElement confirmDeliveryBtn;
+
+    public void confirmDelivery(String delivery) {
+        Assert.assertTrue(setDelivery.isSelected());
+        System.out.println("Weryfikacja sposobu dostawy \"" + delivery + "\": poprawna");
+        confirmDeliveryBtn.click();
     }
 }

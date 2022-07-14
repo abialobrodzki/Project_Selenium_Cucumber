@@ -84,9 +84,15 @@ public class NewOrderSteps {
         cartPage.proceedToCheckout();
     }
 
-    @When("I confirm address.")
+    @And("I confirm address.")
     public void confirmAddress() {
         OrderPage orderPage = new OrderPage(driver);
         orderPage.confirmAddress();
+    }
+
+    @And("I select delivery - {string}.")
+    public void selectDelivery(String delivery) {
+        OrderPage orderPage = new OrderPage(driver);
+        orderPage.confirmDelivery(delivery);
     }
 }

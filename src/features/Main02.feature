@@ -25,9 +25,9 @@ Feature: Add new order.
     # przejście do opcji - checkout,
     When I proceed to checkout.
     # potwierdzenie adresu, może zostać dodany wcześniej ręcznie
-    When I confirm address.
+    And I confirm address.
     # wybieranie metody odbioru - PrestaShop "pick up in store"
-#    And I select delivery.
+    And I select delivery - "Pick up in-store".
   # wybierze opcję płatności - Pay by Check,
   #And I select payment.
   # kliknie na "order with an obligation to pay",
