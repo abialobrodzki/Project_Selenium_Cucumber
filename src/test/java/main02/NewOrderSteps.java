@@ -8,6 +8,8 @@ import main02.page.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.awt.*;
+import java.io.IOException;
 import java.time.Duration;
 
 public class NewOrderSteps {
@@ -106,5 +108,11 @@ public class NewOrderSteps {
     public void confirmOrder() {
         OrderPage orderPage = new OrderPage(driver);
         orderPage.confirmOrder();
+    }
+
+    @Then("I make screenshot with confirm order and payment.")
+    public void takeScreen() throws IOException, AWTException {
+        OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
+        orderConfirmationPage.TakeScreenShot();
     }
 }

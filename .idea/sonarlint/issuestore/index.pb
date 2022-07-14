@@ -23,7 +23,3 @@ Z
 *src/test/java/main01/page/MyAddresses.java,9\0\90227e7ac1f757ad66a28d212477033225859e14
 X
 (src/test/java/main02/page/LoginPage.java,2\7\277fae9d231279d48caef3be49cc59afa336667d
-W
-'src/test/java/main02/page/CartPage.java,0\a\0ab4ebfd647b1a84cc50afc85f2d036146bbe78d
-W
-'src/test/java/main02/page/MainPage.java,1\d\1d1b3e48d3f1f7fd9c1d528dab1bacc2a2b87971
