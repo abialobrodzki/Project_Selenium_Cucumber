@@ -122,4 +122,10 @@ public class NewOrderSteps {
         myOrdersHistory.clickUserBtn();
         myOrdersHistory.clickOrdersHistoryBtn();
     }
+
+    @And("I see order status: {string}.")
+    public void checkOrderStatus(String expectStatus) {
+        MyOrdersHistory myOrdersHistory = new MyOrdersHistory(driver);
+        myOrdersHistory.checkOrderStatus(expectStatus);
+    }
 }

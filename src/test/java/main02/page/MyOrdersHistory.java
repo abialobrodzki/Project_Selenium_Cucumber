@@ -1,5 +1,6 @@
 package main02.page;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,4 +28,16 @@ public class MyOrdersHistory {
         ordersHistoryBtn.click();
     }
 
+    @FindBy(xpath = "//*[@id=\"content\"]//tr[1]/td[4]/span")
+    private WebElement orderStatus;
+    @FindBy(xpath = "//*[@id=\"content\"]//tbody/tr[1]/th")
+    private WebElement orderNumber;
+
+
+    public void checkOrderStatus(String expectStatus) {
+        String actualStatus = orderStatus.getText();
+        String number = orderNumber.getText();
+        Assert.assertEquals(expectStatus, actualStatus);
+        System.out.println("Weryfikacja statusu \"" + expectStatus + "\" dla zamówienia " + number + " : poprawna");
+    }
 }
