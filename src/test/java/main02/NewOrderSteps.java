@@ -101,4 +101,10 @@ public class NewOrderSteps {
         OrderPage orderPage = new OrderPage(driver);
         orderPage.confirmPayment(payment);
     }
+
+    @And("I click \"Order with an obligation to pay\".")
+    public void confirmOrder() {
+        OrderPage orderPage = new OrderPage(driver);
+        orderPage.confirmOrder();
+    }
 }

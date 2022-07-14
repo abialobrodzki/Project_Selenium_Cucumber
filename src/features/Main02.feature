@@ -30,8 +30,8 @@ Feature: Add new order.
     And I select delivery - "Pick up in-store".
     # wybranie opcji płatności - "Pay by Check"
     And I select payment - "Pay by Check".
-  # kliknie na "order with an obligation to pay",
-  #And I click "order with an obligation to pay".
+    # kliknięcie na "Order with an obligation to pay"
+    And I click "Order with an obligation to pay".
   # zrobi screenshot z potwierdzeniem zamówienia i kwotą.
   #Then I make screenshot with confirm order and payment
 

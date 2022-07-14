@@ -40,4 +40,15 @@ public class OrderPage {
         Assert.assertTrue(setPayment.isSelected());
         System.out.println("Weryfikacja sposobu płatności \"" + payment + "\": poprawna");
     }
+
+    @FindBy(xpath = "//*[contains(@name,'terms-and-conditions')]")
+    private WebElement signTerms;
+    @FindBy(xpath = "//*[@id=\"payment-confirmation\"]/div[1]/button")
+    private WebElement confirmOrderBtn;
+
+    public void confirmOrder() {
+        signTerms.click();
+        Assert.assertTrue(confirmOrderBtn.isEnabled());
+        confirmOrderBtn.click();
+    }
 }
