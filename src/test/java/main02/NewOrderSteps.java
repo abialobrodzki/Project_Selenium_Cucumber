@@ -95,4 +95,10 @@ public class NewOrderSteps {
         OrderPage orderPage = new OrderPage(driver);
         orderPage.confirmDelivery(delivery);
     }
+
+    @And("I select payment - {string}.")
+    public void selectPayment(String payment) {
+        OrderPage orderPage = new OrderPage(driver);
+        orderPage.confirmPayment(payment);
+    }
 }

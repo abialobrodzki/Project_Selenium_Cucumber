@@ -5,8 +5,6 @@
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 X
 (src/test/java/main01/NewAddressTest.java,1\2\12fa1372cbb71d14e47396451387b1c93e444aa0
-G
-src/test/java/README.md,6\e\6eae351dd2decb6b7200b9eaeb93accd5d0a5ef7
 Y
 )src/test/java/main01/NewAddressSteps.java,6\9\69797a51e228dfcf4d61bf2f6683cc0e21a61581
 K

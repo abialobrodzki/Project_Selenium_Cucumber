@@ -31,4 +31,13 @@ public class OrderPage {
         System.out.println("Weryfikacja sposobu dostawy \"" + delivery + "\": poprawna");
         confirmDeliveryBtn.click();
     }
+
+    @FindBy(xpath = "//*[@id=\"payment-option-1\"]")
+    private WebElement setPayment;
+
+    public void confirmPayment(String payment) {
+        setPayment.click();
+        Assert.assertTrue(setPayment.isSelected());
+        System.out.println("Weryfikacja sposobu płatności \"" + payment + "\": poprawna");
+    }
 }
