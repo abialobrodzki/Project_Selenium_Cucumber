@@ -34,6 +34,9 @@ Feature: Add new order.
     And I click "Order with an obligation to pay".
     # screenshot z potwierdzeniem zamówienia i kwotą
     Then I make screenshot with confirm order and payment.
-
- # Wejdź w historię zamówień i detale (najpierw kliknij w użytkownika zalogowanego, później kafelek),
- # sprawdź, czy zamówienie znajduje się na liście ze statusem "Awaiting check payment" i kwotą taką samą jak na zamówieniu dwa kroki wcześniej.
+    # wejście w historię zamówień i detale (użytkownik -> kafelek)
+    When I go to order history and details.
+    # sprawdzenie zamówienie na liście i statusie "Awaiting check payment"
+#    And I see order status: "Awaiting check payment".
+    # porównanie kwoty zamówienia z kwotą na zamówieniu dwa kroki wcześniej.
+#    Then I see correct price.

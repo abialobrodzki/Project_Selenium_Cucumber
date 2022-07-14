@@ -115,4 +115,11 @@ public class NewOrderSteps {
         OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
         orderConfirmationPage.TakeScreenShot();
     }
+
+    @When("I go to order history and details.")
+    public void openOrdersList() {
+        MyOrdersHistory myOrdersHistory = new MyOrdersHistory(driver);
+        myOrdersHistory.clickUserBtn();
+        myOrdersHistory.clickOrdersHistoryBtn();
+    }
 }
