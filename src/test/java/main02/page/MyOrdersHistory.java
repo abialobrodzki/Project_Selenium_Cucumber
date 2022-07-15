@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import static main02.page.OrderConfirmationPage.expectOrderNumber;
+import static main02.page.OrderConfirmationPage.expectPrice;
+
 public class MyOrdersHistory {
     private WebDriver driver;
 
@@ -33,11 +36,21 @@ public class MyOrdersHistory {
     @FindBy(xpath = "//*[@id=\"content\"]//tbody/tr[1]/th")
     private WebElement orderNumber;
 
-
     public void checkOrderStatus(String expectStatus) {
         String actualStatus = orderStatus.getText();
         String number = orderNumber.getText();
         Assert.assertEquals(expectStatus, actualStatus);
-        System.out.println("Weryfikacja statusu \"" + expectStatus + "\" dla zamówienia " + number + " : poprawna");
+        System.out.println("Weryfikacja statusu \"" + expectStatus + "\" dla zamówienia \"" + number + "\": poprawna");
+    }
+
+    @FindBy(xpath = "//*[@id=\"content\"]//tr[1]/td[2]")
+    private WebElement orderPrice;
+
+    public void checkOrderPrice() {
+        String actualPrice = orderPrice.getText().substring(1);
+        String actualOrderNumber = orderNumber.getText();
+        Assert.assertEquals(expectPrice, actualPrice);
+        Assert.assertEquals(expectOrderNumber, actualOrderNumber);
+        System.out.println("Weryfikacja ceny \"" + actualPrice + "\" dla zamówienia \"" + actualOrderNumber + "\": poprawna");
     }
 }

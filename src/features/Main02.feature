@@ -38,5 +38,5 @@ Feature: Add new order.
     When I go to order history and details.
     # sprawdzenie zamówienie na liście i statusie "Awaiting check payment"
     And I see order status: "Awaiting check payment".
-    # porównanie kwoty zamówienia z kwotą na zamówieniu dwa kroki wcześniej.
-#    Then I see correct price.
+    # porównanie kwoty zamówienia z kwotą na zamówieniu dwa kroki wcześniej
+    Then I see correct price.

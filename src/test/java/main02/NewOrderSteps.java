@@ -114,6 +114,8 @@ public class NewOrderSteps {
     public void takeScreen() throws IOException, AWTException {
         OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
         orderConfirmationPage.TakeScreenShot();
+        /** pobranie ceny i numeru aktualnego zamówienia */
+        orderConfirmationPage.orderInfoFirst();
     }
 
     @When("I go to order history and details.")
@@ -127,5 +129,11 @@ public class NewOrderSteps {
     public void checkOrderStatus(String expectStatus) {
         MyOrdersHistory myOrdersHistory = new MyOrdersHistory(driver);
         myOrdersHistory.checkOrderStatus(expectStatus);
+    }
+
+    @Then("I see correct price.")
+    public void checkOrderPrice() {
+        MyOrdersHistory myOrdersHistory = new MyOrdersHistory(driver);
+        myOrdersHistory.checkOrderPrice();
     }
 }
